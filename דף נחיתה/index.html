@@ -450,6 +450,13 @@
     .vda-box p { font-size: .93rem; color: #a09060; line-height: 1.7; }
     @media (max-width: 768px) { .vda-box { flex-direction: column; gap: 12px; } }
 
+    /* ─── CERT PAIR (poster-share + graduate photo) ── */
+    .cert-pair-img {
+      height: 380px; width: auto; max-width: 100%;
+      border-radius: 10px; box-shadow: 0 6px 24px rgba(0,0,0,.5);
+      transition: transform .2s;
+    }
+
     /* ─── RESPONSIVE ──────────────────────────── */
     @media (max-width: 768px) {
       nav { padding: 8px 12px; flex-wrap: wrap; gap: 6px; }
@@ -461,6 +468,7 @@
       .instr-inner { flex-direction: column; text-align: center; }
       .comp-table { font-size: .8rem; }
       .comp-table td, .comp-table th { padding: 10px 12px; }
+      .cert-pair-img { height: auto; width: 100%; }
     }
   </style>
 </head>
@@ -589,8 +597,8 @@
       <img src="poster4.png" alt="שמאי בכיר - שריפה" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
     </div>
     <div style="display:flex; justify-content:center; align-items:flex-start; margin-top:16px; gap:16px; flex-wrap:wrap;">
-      <img src="poster-share.png" alt="שמאי בכיר - בית שמאי" style="width:38%; min-width:220px; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="poster.5.png" alt="שמאי בכיר - בוגר הקורס" style="width:38%; min-width:220px; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="poster-share.png" alt="שמאי בכיר - בית שמאי" class="cert-pair-img" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="poster.5.png" alt="שמאי בכיר - בוגר הקורס" class="cert-pair-img" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
     </div>
   </div>
 </section>
