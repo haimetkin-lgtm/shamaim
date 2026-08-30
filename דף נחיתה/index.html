@@ -462,7 +462,8 @@
       nav { padding: 8px 12px; flex-wrap: wrap; gap: 6px; }
       nav .nav-logo { height: 36px; }
       nav .nav-cta { padding: 8px 14px; font-size: 13px; }
-      nav a[href="#personal-coaching"] { font-size: 13px; }
+      nav a[href="#personal-coaching"], nav a[href="#office-training"] { font-size: 12px; }
+      nav .nav-sep { display: none; }
       section { padding: 60px 20px; }
       .whom-grid { grid-template-columns: 1fr; }
       .instr-inner { flex-direction: column; text-align: center; }
@@ -484,6 +485,8 @@
   </a>
   <div style="display:flex; gap:12px; align-items:center;">
     <a href="#personal-coaching" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">ליווי אישי</a>
+    <span class="nav-sep" style="color:rgba(255,255,255,.3); font-size:14px;">|</span>
+    <a href="#office-training" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">קורסים והכשרות במשרדים גדולים</a>
     <a href="#contact" class="nav-cta">להרשמה ופרטים ←</a>
   </div>
 </nav>
@@ -827,7 +830,7 @@
 </section>
 
 <!-- ════ OFFICE TRAINING ════ -->
-<section style="background:#fff; padding:80px 40px;">
+<section id="office-training" style="background:#fff; padding:80px 40px;">
   <div class="container">
     <div style="background:linear-gradient(135deg,#fdf8ec,#f9f0da); border:2px solid var(--gold); border-radius:16px; padding:40px 36px; display:flex; gap:28px; align-items:flex-start;">
       <div style="font-size:2.6rem; flex-shrink:0;">🏢</div>
