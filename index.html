@@ -459,11 +459,10 @@
 
     /* ─── RESPONSIVE ──────────────────────────── */
     @media (max-width: 768px) {
-      nav { padding: 8px 12px; flex-wrap: wrap; gap: 6px; }
+      nav { padding: 8px 12px; gap: 6px; }
       nav .nav-logo { height: 36px; }
       nav .nav-cta { padding: 8px 14px; font-size: 13px; }
-      nav a[href="#personal-coaching"], nav a[href="#office-training"], nav a[href="#why-now"] { font-size: 12px; }
-      nav .nav-sep { display: none; }
+      nav .nav-links { display: none; }
       section { padding: 60px 20px; }
       .whom-grid { grid-template-columns: 1fr; }
       .instr-inner { flex-direction: column; text-align: center; }
@@ -483,14 +482,14 @@
          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
     <span style="display:none; color:#fff; font-size:1.1rem; font-weight:800;">בית שמאי®</span>
   </a>
-  <div style="display:flex; gap:12px; align-items:center;">
+  <div class="nav-links" style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:center;">
     <a href="#personal-coaching" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">ליווי אישי</a>
     <span class="nav-sep" style="color:rgba(255,255,255,.3); font-size:14px;">|</span>
     <a href="#office-training" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">קורסים והכשרות במשרדים גדולים</a>
     <span class="nav-sep" style="color:rgba(255,255,255,.3); font-size:14px;">|</span>
     <a href="#why-now" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">עתיד עולם השמאות לפי דו"ח עתיד המשרות לשנת 2025 של הפורום הכלכלי</a>
-    <a href="#contact" class="nav-cta">להרשמה ופרטים ←</a>
   </div>
+  <a href="#contact" class="nav-cta">להרשמה ופרטים ←</a>
 </nav>
 
 <!-- ════ HERO ════ -->
