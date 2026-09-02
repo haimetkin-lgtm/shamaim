@@ -460,10 +460,21 @@
 
     /* ─── RESPONSIVE ──────────────────────────── */
     @media (max-width: 768px) {
-      nav { padding: 8px 12px; gap: 6px; }
+      nav { padding: 8px 12px; gap: 6px; position: relative; }
       nav .nav-logo { height: 36px; }
       nav .nav-cta { padding: 8px 14px; font-size: 13px; }
-      nav .nav-links { display: none !important; }
+      nav .nav-burger { display: block !important; }
+      nav .nav-links {
+        position: absolute; top: 100%; right: 0; left: 0;
+        background: var(--dark); box-shadow: 0 8px 12px rgba(0,0,0,.3);
+        flex-direction: column !important; align-items: flex-start !important;
+        max-height: 0; overflow: hidden; padding: 0 20px !important;
+        transition: max-height .3s ease, padding .3s ease;
+        gap: 4px !important;
+      }
+      nav .nav-links.open { max-height: 400px; padding: 14px 20px !important; }
+      nav .nav-links a { padding: 10px 0; width: 100%; }
+      nav .nav-sep { display: none; }
       section { padding: 60px 20px; }
       .whom-grid { grid-template-columns: 1fr; }
       .instr-inner { flex-direction: column; text-align: center; }
@@ -493,7 +504,10 @@
     <span class="nav-sep" style="color:rgba(255,255,255,.3); font-size:14px;">|</span>
     <a href="#why-now" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">עתיד עולם השמאות לפי דו"ח עתיד המשרות לשנת 2025 של הפורום הכלכלי</a>
   </div>
-  <a href="#contact" class="nav-cta">להרשמה ופרטים ←</a>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <button class="nav-burger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="תפריט נוסף" style="display:none; background:none; border:none; color:#fff; font-size:24px; cursor:pointer; padding:4px 8px; line-height:1;">☰</button>
+    <a href="#contact" class="nav-cta">להרשמה ופרטים ←</a>
+  </div>
 </nav>
 
 <!-- ════ HERO ════ -->
