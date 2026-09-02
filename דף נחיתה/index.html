@@ -497,7 +497,7 @@
          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
     <span style="display:none; color:#fff; font-size:1.1rem; font-weight:800;">בית שמאי®</span>
   </a>
-  <div class="nav-links" style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:center;">
+  <div class="nav-links" onclick="if(event.target.tagName==='A'){this.classList.remove('open')}" style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:center;">
     <a href="#personal-coaching" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">ליווי אישי</a>
     <span class="nav-sep" style="color:rgba(255,255,255,.3); font-size:14px;">|</span>
     <a href="#office-training" style="color:var(--gold-light); font-size:14px; font-weight:600; text-decoration:none;">קורסים והכשרות במשרדים גדולים</a>
