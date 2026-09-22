@@ -508,15 +508,24 @@
     }
     .vda-summary { max-width: 760px; margin-top: 44px; padding-top: 32px; border-top: 1px solid rgba(34,211,238,.2); }
     .vda-summary p { color: #c3dce4; font-size: 1.02rem; line-height: 1.8; margin-bottom: 14px; }
-    .vda-tiers-title { font-size: 1.4rem; font-weight: 800; color: #fff; margin: 44px 0 24px; text-align: center; }
-    .vda-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin-bottom: 12px; }
+    .vda-tiers-title { font-size: 1.4rem; font-weight: 800; color: #fff; margin: 44px 0 8px; text-align: center; }
+    .vda-tiers-subtitle { color: #8fc4d4; font-size: .95rem; text-align: center; margin-bottom: 28px; }
+    .vda-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin-bottom: 12px; align-items: stretch; }
     .vda-tier-card { background: rgba(34,211,238,.06); border: 1px solid rgba(34,211,238,.25); border-radius: 16px; padding: 32px 28px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .vda-tier-card img { width: 130px; height: auto; margin-bottom: 18px; }
+    .vda-tier-card img { height: auto; margin-bottom: 18px; }
     .vda-tier-card h4 { color: #67e8f9; font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
     .vda-tier-card .vda-tier-sub { color: #8fc4d4; font-size: .85rem; font-weight: 600; margin-bottom: 14px; }
     .vda-tier-card p { color: #c3dce4; font-size: .9rem; line-height: 1.7; margin-bottom: 14px; }
     .vda-tier-promise { color: #fff; font-weight: 700; font-size: .93rem; margin-bottom: 10px; }
     .vda-tier-tag { color: #22d3ee; font-size: .78rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+    .vda-tier-tag2 { color: #8fc4d4; font-size: .72rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin-top: 6px; }
+    .vda-tier-card.tier-certified img { width: 140px; }
+    .vda-tier-card.tier-expert { border-color: rgba(34,211,238,.45); background: rgba(34,211,238,.09); box-shadow: 0 0 20px rgba(34,211,238,.12); }
+    .vda-tier-card.tier-expert img { width: 165px; }
+    .vda-tier-card.tier-master { border: 2px solid var(--gold); background: rgba(34,211,238,.09); box-shadow: 0 0 28px rgba(200,150,42,.25); }
+    .vda-tier-card.tier-master img { width: 195px; }
+    .vda-tier-card.tier-master h4 { color: var(--gold-light); }
+    .vda-tier-card.tier-master .vda-tier-tag { color: var(--gold-light); }
     @media (max-width: 768px) { .vda-list { columns: 1; } }
     @media (max-width: 600px) {
       .vda-included img { float: none !important; display: block !important; margin: 0 auto 20px !important; width: 140px !important; max-width: 50% !important; }
@@ -1132,31 +1141,33 @@
       </div>
     </div>
 
-    <h3 class="vda-tiers-title">מדרג ההסמכות <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span></h3>
+    <h3 class="vda-tiers-title">מסלול ההסמכה המקצועי של <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span></h3>
+    <p class="vda-tiers-subtitle">שלוש רמות. שלוש דרגות מומחיות. סטנדרט מקצועי אחד.</p>
     <div class="vda-tiers">
-      <div class="vda-tier-card">
+      <div class="vda-tier-card tier-certified">
         <img src="vda-certified-badge.png" alt="חותמת VDA™ Certified">
         <h4>מוסמך <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span></h4>
-        <div class="vda-tier-sub">VDA™ Certified</div>
-        <p>דרגת ההסמכה הבסיסית: שמאי שעבר הכשרה לעבודה מקצועית עם מערכת <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>, כולל ניתוח תמונות ונתונים, עבודה עם שני מנועי <span dir="ltr" style="unicode-bidi:isolate;">AI</span>, הצלבת ממצאים ואימות מידע, תוך שמירה על שיקול דעת ואחריות מקצועית.</p>
+        <div class="vda-tier-sub"><span dir="ltr" style="unicode-bidi:isolate;">VDA™ Certified</span></div>
+        <p>דרגת ההסמכה הבסיסית: שמאי שעבר הכשרה לעבודה מקצועית עם מערכת <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>, כולל ניתוח תמונות ומסמכים, עבודה עם שני מנועי <span dir="ltr" style="unicode-bidi:isolate;">AI</span>, הצלבת ממצאים, אימות מידע ובקרת תוצאות, תוך שמירה על שיקול דעת ואחריות מקצועית.</p>
         <div class="vda-tier-promise">שמאי שיודע לעבוד נכון עם מערכת <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>.</div>
         <div class="vda-tier-tag">AI-Enhanced Appraisal</div>
       </div>
-      <div class="vda-tier-card">
+      <div class="vda-tier-card tier-expert">
         <img src="vda-expert-badge.webp" alt="חותמת VDA™ Expert">
         <h4>מומחה <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span></h4>
-        <div class="vda-tier-sub">VDA™ Expert</div>
-        <p>דרגת מומחיות מתקדמת למי ששולט בעומק במתודולוגיה: מזהה כשלים, סתירות והטיות, מבצע בקרת עומק על תוצאות המערכת ומשפר את תהליך העבודה. לא רק מפעיל את <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>, אלא יודע לבקר אותה.</p>
+        <div class="vda-tier-sub"><span dir="ltr" style="unicode-bidi:isolate;">VDA™ Expert</span></div>
+        <p>דרגת מומחיות מתקדמת למי ששולט לעומק במתודולוגיית <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>, מזהה כשלים, סתירות והטיות, מבצע בקרת עומק על תוצאות המערכת ומסוגל לשפר ולחדד את תהליך העבודה.</p>
         <div class="vda-tier-promise">מומחה שמסוגל לבקר, לחדד ולשפר את המערכת.</div>
         <div class="vda-tier-tag">Advanced VDA™ Intelligence</div>
+        <div class="vda-tier-tag2">Analyze • Validate • Improve</div>
       </div>
-      <div class="vda-tier-card">
+      <div class="vda-tier-card tier-master">
         <img src="vda-master-badge.webp" alt="חותמת VDA™ Master">
         <h4>מאסטר <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span></h4>
-        <div class="vda-tier-sub">VDA™ Master</div>
-        <p>דרגת ההסמכה הגבוהה ביותר: מומחיות מוכחת ויכולת להוביל, להדריך ולבקר אנשי מקצוע אחרים במתודולוגיית <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>. בכפוף להרשאה מפורשת בלבד, מאסטר <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span> עשוי לקבל מעמד שותף מוסמך להכשרה והסמכה.</p>
+        <div class="vda-tier-sub"><span dir="ltr" style="unicode-bidi:isolate;">VDA™ Master</span></div>
+        <p>דרגת ההסמכה הגבוהה ביותר: מומחיות מקצועית, יכולת להוביל, להדריך ולבקר אנשי מקצוע אחרים במתודולוגיית <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>. בכפוף להרשאה נפרדת ומפורשת, <span dir="ltr" style="unicode-bidi:isolate;">VDA™ Master</span> עשוי לקבל הרשאה להדריך, לבחון ולהסמיך אנשי מקצוע במתודולוגיית <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>.</p>
         <div class="vda-tier-promise">המומחיות שמובילה את הדור הבא של מקצועני <span dir="ltr" style="unicode-bidi:isolate;">VDA™</span>.</div>
-        <div class="vda-tier-tag">Lead · Train · Validate · Certify</div>
+        <div class="vda-tier-tag">Lead • Train • Validate</div>
       </div>
     </div>
 
