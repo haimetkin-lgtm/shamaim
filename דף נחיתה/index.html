@@ -152,7 +152,7 @@
     .why-now .section-title { color: #fff; }
     .why-now .section-lead { color: #9ab09c; }
     .why-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
       gap: 24px; margin-top: 40px;
     }
     .why-card {
@@ -192,7 +192,7 @@
     /* ─── MODULES ─────────────────────────────── */
     .modules { background: var(--gray); }
     .modules-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
       gap: 20px;
     }
     .module-card {
@@ -260,7 +260,7 @@
     .certification { background: var(--dark); color: #fff; }
     .certification .section-title { color: #fff; }
     .cert-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
       gap: 20px; margin-top: 40px;
     }
     .cert-item {
@@ -275,7 +275,7 @@
     /* ─── COMMUNITY ───────────────────────────── */
     .community { background: #fff; }
     .comm-list {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
       gap: 18px; margin-top: 32px;
     }
     .comm-item {
@@ -484,7 +484,7 @@
     .vda-block p { color: #c3dce4; font-size: 1rem; line-height: 1.85; margin-bottom: 16px; }
     .vda-block p.vda-em { color: #67e8f9; font-weight: 700; font-size: 1.1rem; }
     .vda-h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin: 44px 0 20px; }
-    .vda-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 20px; margin-bottom: 12px; }
+    .vda-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 20px; margin-bottom: 12px; }
     .vda-feature { background: rgba(34,211,238,.06); border: 1px solid rgba(34,211,238,.2); border-radius: 12px; padding: 22px; }
     .vda-feature h4 { color: #67e8f9; font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
     .vda-feature p { color: #a8c8d4; font-size: .9rem; line-height: 1.6; }
@@ -512,7 +512,7 @@
     .vda-summary p { color: #c3dce4; font-size: 1.02rem; line-height: 1.8; margin-bottom: 14px; }
     .vda-tiers-title { font-size: 1.4rem; font-weight: 800; color: #fff; margin: 44px 0 8px; text-align: center; }
     .vda-tiers-subtitle { color: #8fc4d4; font-size: .95rem; text-align: center; margin-bottom: 28px; }
-    .vda-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 24px; margin-bottom: 12px; align-items: stretch; }
+    .vda-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 24px; margin-bottom: 12px; align-items: stretch; }
     .vda-tier-card { background: rgba(34,211,238,.06); border: 1px solid rgba(34,211,238,.25); border-radius: 16px; padding: 32px 28px; text-align: center; display: flex; flex-direction: column; align-items: center; }
     .vda-tier-card img { height: auto; margin-bottom: 18px; }
     .vda-tier-card h4 { color: #67e8f9; font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
@@ -545,7 +545,7 @@
     }
     .ai-lead { color: #8b9eb0; font-size: 1.05rem; margin-bottom: 48px; max-width: 680px; }
     .ai-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
       gap: 20px; margin-bottom: 48px;
     }
     .ai-card {
@@ -908,7 +908,7 @@
     <div class="divider" style="background:var(--gold)"></div>
     <h2 class="section-title" style="color:#fff; margin-bottom:12px">לפענח · להכריע · <span style="color:var(--gold-light)">להוביל</span></h2>
     <p style="color:#666; font-size:1rem; margin-bottom:40px;">שיטפון, עובש, שריפה, בית משפט, השמאי הבכיר מוביל תיק בכל תרחיש</p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap:16px;">
       <img src="poster1.png" alt="שמאי בכיר - שיטפון" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
       <img src="poster2.png" alt="שמאי בכיר - עובש" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
       <img src="poster3.png" alt="שמאי בכיר - בית משפט" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
@@ -1322,7 +1322,7 @@
 
     <div style="background:linear-gradient(135deg,#fdf8ec,#f9f0da); border:2px solid var(--gold); border-radius:16px; padding:40px 36px;">
       <h3 style="font-size:1.4rem; font-weight:800; color:#7a5c10; margin-bottom:24px; text-align:center;">24 שעות של חניכה מקצועית אישית</h3>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:16px; margin-bottom:36px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap:16px; margin-bottom:36px;">
         <div style="background:#fff; border-radius:10px; padding:16px 20px; font-size:.93rem; color:#7a5c10; font-weight:600;">✓ 12 מפגשים × שעתיים</div>
         <div style="background:#fff; border-radius:10px; padding:16px 20px; font-size:.93rem; color:#7a5c10; font-weight:600;">✓ ליווי אישי 1:1</div>
         <div style="background:#fff; border-radius:10px; padding:16px 20px; font-size:.93rem; color:#7a5c10; font-weight:600;">✓ פרונטלי ומקוון</div>
