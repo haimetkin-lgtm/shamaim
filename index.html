@@ -404,8 +404,42 @@
     body.a11y-stop-anim, body.a11y-stop-anim * { animation: none !important; transition: none !important; }
 
     /* ─── LIGHTBOX GALLERY ────────────────────── */
-    .gal-thumb { cursor: zoom-in; }
-    .gal-thumb:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+    .stack { max-width: 520px; margin: 0 auto; }
+    .stack-stage { position: relative; overflow: hidden; touch-action: pan-y; }
+    .stack-stage::before { content: ''; display: block; padding-top: 92%; }
+    .stack-card {
+      position: absolute; left: 44px; top: 36px;
+      width: calc(100% - 88px); height: calc(100% - 64px);
+      object-fit: contain; background: #050505;
+      border: 1px solid rgba(255,255,255,.18); border-radius: 14px;
+      box-shadow: 0 14px 36px rgba(0,0,0,.6);
+      transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .35s ease, filter .35s ease;
+      will-change: transform; user-select: none; -webkit-user-drag: none;
+    }
+    .stack-card[data-pos="0"] { transform: none; z-index: 9; filter: none; cursor: zoom-in; border-color: rgba(232,184,75,.45); }
+    .stack-card[data-pos="0"]:hover { transform: translateY(-3px); }
+    .stack-card[data-pos="1"] { transform: translate(26px,-8px) rotate(4deg) scale(.97); z-index: 8; filter: brightness(.55); cursor: pointer; }
+    .stack-card[data-pos="2"] { transform: translate(-26px,-14px) rotate(-4deg) scale(.94); z-index: 7; filter: brightness(.42); cursor: pointer; }
+    .stack-card[data-pos="3"] { transform: translate(12px,-20px) rotate(5deg) scale(.91); z-index: 6; filter: brightness(.32); cursor: pointer; }
+    .stack-card[data-pos="h"] { transform: translate(0,-20px) scale(.88); z-index: 1; opacity: 0; pointer-events: none; }
+    .stack-card:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+    .stack-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 6px; }
+    .stack-arrow {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(255,255,255,.08); color: #fff; border: 2px solid rgba(255,255,255,.3);
+      font-size: 24px; line-height: 1; cursor: pointer; font-family: inherit;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .stack-arrow:hover, .stack-arrow:focus-visible { border-color: var(--gold-light); background: rgba(255,255,255,.18); outline: none; }
+    .stack-dots { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; max-width: 220px; }
+    .stack-dot { position: relative; width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0; background: #555; cursor: pointer; transition: transform .2s, background .2s; }
+    .stack-dot::after { content: ''; position: absolute; inset: -8px; }
+    .stack-dot.active { background: var(--gold-light); transform: scale(1.35); }
+    .stack-dot:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+    .stack-hint { text-align: center; color: #9a9a9a; font-size: .85rem; margin-top: 14px; }
+    body.a11y-contrast .stack-dot { background: #fff !important; }
+    body.a11y-contrast .stack-dot.active { background: #ffe97a !important; }
+    @media (prefers-reduced-motion: reduce) { .stack-card, .stack-dot { transition: none; } }
     .lb {
       position: fixed; inset: 0; z-index: 1000;
       background: rgba(0,0,0,.93);
@@ -932,25 +966,30 @@
 </section>
 
 <!-- ════ POSTERS ════ -->
-<section style="background:#111; padding:70px 40px;">
+<section id="gallery" style="background:#111; padding:70px 40px;">
   <div class="container">
     <div class="divider" style="background:var(--gold)"></div>
-    <h2 class="section-title" style="color:#fff; margin-bottom:12px">לפענח · להכריע · <span style="color:var(--gold-light)">להוביל</span></h2>
+    <h2 class="section-title" style="color:#fff; margin-bottom:10px">גלריה</h2>
+    <p style="color:#fff; font-size:1.25rem; font-weight:800; margin-bottom:10px;">לפענח · להכריע · <span style="color:var(--gold-light)">להוביל</span></p>
     <p style="color:#666; font-size:1rem; margin-bottom:40px;">שיטפון, עובש, שריפה, בית משפט, השמאי הבכיר מוביל תיק בכל תרחיש</p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap:16px;">
-      <img src="poster1.png" alt="שמאי בכיר - שיטפון" class="gal-thumb" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="poster2.png" alt="שמאי בכיר - עובש" class="gal-thumb" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="poster3.png" alt="שמאי בכיר - בית משפט" class="gal-thumb" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="poster4.png" alt="שמאי בכיר - שריפה" class="gal-thumb" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="display:flex; justify-content:center; align-items:flex-start; margin-top:16px; gap:16px; flex-wrap:wrap;">
-      <img src="poster-share.png" alt="שמאי בכיר - בית שמאי®" class="cert-pair-img gal-thumb" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="poster.5.png" alt="שמאי בכיר - בוגר הקורס" class="cert-pair-img gal-thumb" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap:16px; margin-top:16px;">
-      <img src="gallery-vda-1.webp" alt="לא עוד שמאי שעובד לבד: שמאי בכיר מוסמך VDA™ עובד עם שכבת אינטליגנציה נוספת" class="gal-thumb" loading="lazy" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="gallery-vda-2.webp" alt="VDA™ Certified: לא כמעט ולא בערך, VDA זו שומה עם ערך" class="gal-thumb" loading="lazy" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      <img src="gallery-vda-3.webp" alt="השמאים המתקדמים: ניתוח נזקים מתקדם עם VDA™ Certified" class="gal-thumb" loading="lazy" style="width:100%; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.5); transition:transform .2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+    <div class="stack" id="galStack" role="region" aria-roledescription="קרוסלה" aria-label="גלריית תמונות">
+      <div class="stack-stage" id="galStage">
+        <img data-gallery class="stack-card" src="gallery-vda-1.webp" alt="לא עוד שמאי שעובד לבד: שמאי בכיר מוסמך VDA™ עובד עם שכבת אינטליגנציה נוספת" draggable="false">
+        <img data-gallery class="stack-card" src="gallery-vda-2.webp" alt="VDA™ Certified: לא כמעט ולא בערך, VDA זו שומה עם ערך" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="gallery-vda-3.webp" alt="השמאים המתקדמים: ניתוח נזקים מתקדם עם VDA™ Certified" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster1.png" alt="שמאי בכיר - שיטפון" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster2.png" alt="שמאי בכיר - עובש" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster3.png" alt="שמאי בכיר - בית משפט" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster4.png" alt="שמאי בכיר - שריפה" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster-share.png" alt="שמאי בכיר - בית שמאי®" loading="lazy" draggable="false">
+        <img data-gallery class="stack-card" src="poster.5.png" alt="שמאי בכיר - בוגר הקורס" loading="lazy" draggable="false">
+      </div>
+      <div class="stack-controls">
+        <button type="button" class="stack-arrow" id="stackPrev" aria-label="התמונה הקודמת">›</button>
+        <div class="stack-dots" id="stackDots"></div>
+        <button type="button" class="stack-arrow" id="stackNext" aria-label="התמונה הבאה">‹</button>
+      </div>
+      <div class="stack-hint" id="stackHint"></div>
     </div>
   </div>
 </section>
@@ -1732,7 +1771,7 @@
 
 <script>
   (function () {
-    var thumbs = Array.prototype.slice.call(document.querySelectorAll('img.gal-thumb'));
+    var thumbs = Array.prototype.slice.call(document.querySelectorAll('img[data-gallery]'));
     var lb = document.getElementById('lightbox');
     if (!thumbs.length || !lb) return;
     var img = document.getElementById('lbImg');
@@ -1765,21 +1804,14 @@
       lb.hidden = true;
       document.body.style.overflow = '';
       img.removeAttribute('src');
-      if (lastFocus && lastFocus.focus) lastFocus.focus();
+      if (window.galleryStackGoto) { window.galleryStackGoto(idx, true); }
+      else if (lastFocus && lastFocus.focus) { lastFocus.focus(); }
     }
     // RTL: "next" is on the left, "previous" on the right
     function next() { show(idx + 1); }
     function prev() { show(idx - 1); }
 
-    thumbs.forEach(function (t, i) {
-      t.setAttribute('role', 'button');
-      t.setAttribute('tabindex', '0');
-      t.setAttribute('aria-label', 'הגדלת תמונה: ' + t.alt);
-      t.addEventListener('click', function () { open(i); });
-      t.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
-      });
-    });
+    window.openLightbox = open;
 
     closeBtn.addEventListener('click', close);
     nextBtn.addEventListener('click', next);
@@ -1807,6 +1839,91 @@
       startX = null;
       if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
     }, { passive: true });
+  })();
+</script>
+
+<script>
+  (function () {
+    var stack = document.getElementById('galStack');
+    var stage = document.getElementById('galStage');
+    if (!stack || !stage) return;
+    var cards = Array.prototype.slice.call(stage.querySelectorAll('img[data-gallery]'));
+    var n = cards.length, cur = 0, startX = null;
+    var dotsEl = document.getElementById('stackDots');
+    var hint = document.getElementById('stackHint');
+    var dots = [];
+
+    for (var d = 0; d < n; d++) {
+      (function (i) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'stack-dot';
+        b.setAttribute('aria-label', 'תמונה ' + (i + 1) + ' מתוך ' + n);
+        b.addEventListener('click', function () { goto(i); });
+        dotsEl.appendChild(b);
+        dots.push(b);
+      })(d);
+    }
+    hint.textContent = n + ' תמונות · לחצו על התמונה להגדלה';
+
+    function render() {
+      cards.forEach(function (c, i) {
+        var pos = (i - cur + n) % n;
+        c.setAttribute('data-pos', pos <= 3 ? pos : 'h');
+        if (pos === 0) {
+          c.setAttribute('role', 'button');
+          c.setAttribute('tabindex', '0');
+          c.removeAttribute('aria-hidden');
+          c.setAttribute('aria-label', 'הגדלת תמונה: ' + c.alt + ' (' + (i + 1) + ' מתוך ' + n + ')');
+        } else {
+          c.removeAttribute('role');
+          c.removeAttribute('tabindex');
+          c.removeAttribute('aria-label');
+          c.setAttribute('aria-hidden', 'true');
+        }
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('active', i === cur);
+        dot.setAttribute('aria-current', i === cur ? 'true' : 'false');
+      });
+    }
+    function goto(i, focusFront) {
+      cur = (i + n) % n;
+      render();
+      if (focusFront) cards[cur].focus();
+    }
+    // RTL: "next" is on the left, "previous" on the right
+    function next() { goto(cur + 1); }
+    function prev() { goto(cur - 1); }
+
+    cards.forEach(function (c, i) {
+      c.addEventListener('click', function () {
+        if (i === cur) { if (window.openLightbox) window.openLightbox(i); }
+        else { goto(i); }
+      });
+      c.addEventListener('keydown', function (e) {
+        if (i === cur && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          if (window.openLightbox) window.openLightbox(i);
+        }
+      });
+    });
+    document.getElementById('stackNext').addEventListener('click', next);
+    document.getElementById('stackPrev').addEventListener('click', prev);
+    stack.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); next(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); prev(); }
+    });
+    stage.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX;
+      startX = null;
+      if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
+    }, { passive: true });
+
+    window.galleryStackGoto = goto;
+    render();
   })();
 </script>
 
