@@ -99,6 +99,10 @@
   .vda { background: linear-gradient(135deg, #0a1d2e, #0f3040); color: #fff; }
   .vda h2 { color: #fff; } .vda h2 span { color: #22d3ee; }
   .vda p { color: #c3dce4; max-width: 780px; margin-bottom: 14px; }
+  .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px,100%), 1fr)); gap: 22px; margin-top: 8px; }
+  .benefit { background: rgba(255,255,255,.06); border: 1px solid rgba(34,211,238,.25); border-radius: 14px; padding: 26px 26px 22px; }
+  .benefit h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; line-height: 1.4; }
+  .benefit p { max-width: none; }
   .vda .note { color: #8fc4d4; font-size: 15px; }
   .vda .link { display: inline-block; margin-top: 10px; color: #22d3ee; font-weight: 800; text-decoration: none; border-bottom: 2px solid rgba(34,211,238,.4); }
 
@@ -231,10 +235,19 @@
 
 <section class="vda">
   <div class="container">
-    <h2>יתרון הבוגר: <span class="ltr-inline">VDA™</span> ללא הגבלה</h2>
-    <p>בוגרי הקורס יקבלו שימוש ללא הגבלה במערכת <span class="ltr-inline">VDA™</span> לנזקי מלחמה, מערכת לניתוח חזותי של נזקים ולהפקת שומה ראשונית מתמונות. המערכת משולבת בתוכנית הלימודים ומשמשת לתרגול מעשי במפגש הרביעי.</p>
-    <p class="note">כיום המערכת פתוחה לשימוש בודד בלבד לכל משתמש. הגישה ללא הגבלה שמורה לבוגרי הקורס.</p>
-    <a class="link" href="https://wardamageassessment.lovable.app/" target="_blank" rel="noopener">לצפייה במערכת ←</a>
+    <h2>יתרונות <span>הבוגר</span></h2>
+    <div class="benefits">
+      <div class="benefit">
+        <h3>שימוש ללא הגבלה במערכת <span class="ltr-inline">VDA™</span> לנזקי מלחמה</h3>
+        <p>בוגרי הקורס יקבלו שימוש ללא הגבלה במערכת <span class="ltr-inline">VDA™</span> לנזקי מלחמה, מערכת לניתוח חזותי של נזקים ולהפקת שומה ראשונית מתמונות. המערכת משולבת בתוכנית הלימודים ומשמשת לתרגול מעשי במפגש הרביעי.</p>
+        <p class="note">כיום המערכת פתוחה לשימוש בודד בלבד לכל משתמש. הגישה ללא הגבלה שמורה לבוגרי הקורס.</p>
+        <a class="link" href="https://wardamageassessment.lovable.app/" target="_blank" rel="noopener">לצפייה במערכת ←</a>
+      </div>
+      <div class="benefit">
+        <h3>חברות בבית שמאי בפטור מדמי חברות לשנה הראשונה</h3>
+        <p>חברות בבית שמאי בפטור מדמי חברות לשנה הראשונה, מה שמאפשר לחבר לעשות שימוש בסמל הארגון וליהנות מתמיכה, ליווי וייעוץ אישי של חיים אטקין.</p>
+      </div>
+    </div>
   </div>
 </section>
 
