@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>אנליסט מודיעין ארגוני | קצין אוסינט ארגוני (OSINT) | לימודי תעודה | בית שמאי®</title>
-<meta name="description" content="לימודי תעודה מקוונים בני 6 מפגשים: אנליסט מודיעין ארגוני, קצין אוסינט ארגוני (Organizational OSINT Officer). אוסינט (OSINT) הוא מודיעין ממקורות גלויים: הגדרת צורך מודיעיני, איסוף ואימות, בקרת הזיות AI, תדרוך הנהלה ותיק אנליסט. 4,000 ₪ ועוד מע״מ.">
-<meta name="keywords" content="אנליסט מודיעין ארגוני, מודיעין ארגוני, מודיעין עסקי, מודיעין תחרותי, OSINT, מידע גלוי, אנליסט OSINT, קורס מודיעין, בינה מלאכותית במחקר, אימות מידע, בקרת הזיות AI, תדרוך הנהלה, בית שמאי, לימודי תעודה, קצין אוסינט ארגוני, אוסינט, אוסינט ארגוני, OSINT Officer, Organizational OSINT Officer, Open Source Intelligence, מודיעין ממקורות גלויים">
+<meta name="description" content="לימודי תעודה מקוונים בני 6 מפגשים: אנליסט מודיעין ארגוני, קצין אוסינט ארגוני (Organizational OSINT Officer). אוסינט (OSINT) הוא מודיעין ממקורות גלויים: הגדרת צורך מודיעיני, איסוף ואימות, בקרת הזיות AI, תדרוך הנהלה ותיק אנליסט. אפשר ללמוד במחזור חי או בקורס מצולם. 4,000 ₪ ועוד מע״מ.">
+<meta name="keywords" content="אנליסט מודיעין ארגוני, מודיעין ארגוני, מודיעין עסקי, מודיעין תחרותי, OSINT, מידע גלוי, אנליסט OSINT, קורס מודיעין, בינה מלאכותית במחקר, אימות מידע, בקרת הזיות AI, תדרוך הנהלה, בית שמאי, לימודי תעודה, קצין אוסינט ארגוני, אוסינט, אוסינט ארגוני, OSINT Officer, Organizational OSINT Officer, Open Source Intelligence, מודיעין ממקורות גלויים, קורס מצולם, קורס מוקלט, לימוד עצמי, אוסינט מצולם">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -46,7 +46,8 @@
   "educationalCredentialAwarded": "תעודת סיום לימודי תעודה, בית שמאי®",
   "offers": { "@type": "Offer", "price": "4720", "priceCurrency": "ILS", "availability": "https://schema.org/InStock", "url": "https://betshamay.co.il/osint-analyst/#register" },
   "hasCourseInstance": [
-    { "@type": "CourseInstance", "courseMode": "online", "name": "מחזור ימי חמישי, מהשעה 19:30" }
+    { "@type": "CourseInstance", "courseMode": "online", "name": "מחזור ימי חמישי, מהשעה 19:30" },
+    { "@type": "CourseInstance", "courseMode": "online", "name": "קורס מצולם: קישור להקלטות נשלח במייל אחרי ההרשמה והתשלום" }
   ]
 }
 </script>
@@ -94,6 +95,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "כן. הקורס הוא לימודי תעודה בני 6 מפגשים מקוונים, ובסיומו מוענקת תעודת סיום מטעם \"בית שמאי®\". אפשר לראות תעודה לדוגמה בדף."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם יש גם קורס מצולם?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן. אפשר לבחור בטופס ההרשמה בין מחזור חי לקורס מצולם. המחיר זהה, והתוכן זהה, כולל כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הקורס המצולם כפוף למבחן הכניסה, ומי שלא יתקבל יקבל החזר מלא."
       }
     },
     {
@@ -206,6 +215,12 @@
   #thanks { display: none; max-width: 560px; }
   .wa { color: var(--gold-light); font-weight: 700; }
 
+  .opts { display: grid; gap: 10px; }
+  .opt { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 600; color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; padding: 12px 14px; cursor: pointer; margin: 0; }
+  .opt input { width: 20px; height: 20px; margin-top: 3px; flex: 0 0 auto; }
+  .opt small { display: block; font-weight: 400; font-size: 13px; color: #b9cdbb; }
+  .opt:has(input:checked) { border-color: var(--gold-light); background: rgba(232,184,75,.14); }
+
   .faq details { background: #fff; border: 1px solid #e1e8e1; border-radius: 10px; padding: 14px 20px; margin-bottom: 10px; }
   .faq summary { cursor: pointer; font-weight: 800; }
   .faq p { margin-top: 10px; color: #444; }
@@ -240,7 +255,7 @@
   <p class="sub">אוסינט (<span class="ltr-inline">OSINT</span>, <span class="ltr-inline">Open Source Intelligence</span>) הוא מודיעין ממקורות גלויים. כאן הופכים אותו להחלטות מבוססות ומאומתות, בכל ארגון, חברה או משרד</p>
   <div class="facts">
     <div class="fact">6 מפגשים<small>לימודי תעודה מקוונים</small></div>
-    <div class="fact">ימי חמישי<small>מהשעה 19:30, <span class="ltr-inline">Google Meet</span></small></div>
+    <div class="fact">ימי חמישי<small>מהשעה 19:30, <span class="ltr-inline">Google Meet</span>, או קורס מצולם באותו מחיר</small></div>
     <div class="fact">4,000 ₪ ועוד מע״מ<small>4,720 ₪ כולל מע״מ</small></div>
   </div>
   <a class="btn" href="#register">להרשמה ותשלום</a>
@@ -346,6 +361,7 @@
       <div class="term"><b>תשלום</b>התשלום מתבצע בעת ההרשמה: 4,000 ₪ ועוד מע״מ, כלומר 4,720 ₪ כולל מע״מ, בכרטיס אשראי דרך דף תשלום מאובטח של קארדקום.</div>
       <div class="term"><b>החזר כספי</b>מי שלא התקבל לקורס יקבל החזר מלא של התשלום.</div>
       <div class="term"><b>מועדים</b>ימי חמישי, מהשעה 19:30, בלימוד מקוון ב-<span class="ltr-inline">Google Meet</span>.</div>
+      <div class="term"><b>קורס מצולם</b>אפשר גם ללמוד בקורס מצולם, באותו מחיר, עם כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הוא כפוף למבחן הכניסה ולהחזר מלא למי שלא התקבל.</div>
     </div>
   </div>
 </section>
@@ -353,12 +369,12 @@
 <section class="reg" id="register">
   <div class="container">
     <h2>הרשמה ותשלום</h2>
-    <p class="lead">ממלאים פרטים ועוברים לדף התשלום המאובטח. ארגון שמעוניין להכשיר כמה אנליסטים, או לשלם בהזמנת רכש, יכול להשאיר בקשה להצעת מחיר.</p>
+    <p class="lead">ממלאים פרטים, בוחרים מחזור חי או קורס מצולם ועוברים לדף התשלום המאובטח. ארגון שמעוניין להכשיר כמה אנליסטים, או לשלם בהזמנת רכש, יכול להשאיר בקשה להצעת מחיר.</p>
 
     <div id="failed" class="msg err" style="display:none; max-width:560px;">התשלום לא הושלם. אפשר לנסות שוב, או לפנות אלינו ב<a href="https://wa.me/972523728828" target="_blank" rel="noopener">וואטסאפ</a>.</div>
 
     <div id="thanks">
-      <div class="msg ok" id="thanksOk" style="display:none;"><b>התשלום התקבל, תודה!</b><br>ההרשמה נקלטה. נשלח אליך מבחן כניסה קצר ופרטי התחברות למפגשים. מי שלא יתקבל יקבל החזר מלא.</div>
+      <div class="msg ok" id="thanksOk" style="display:none;"><b>התשלום התקבל, תודה!</b><br>ההרשמה נקלטה. נשלח אליך מבחן כניסה קצר ופרטי התחברות למפגשים. מי שבחר בקורס המצולם יקבל קישור להקלטות למייל. מי שלא יתקבל יקבל החזר מלא.</div>
       <div class="msg ok" id="thanksWait" style="display:none;">מאמתים את התשלום מול חברת האשראי. אפשר להמתין כמה שניות בדף.</div>
       <div class="msg err" id="thanksLate" style="display:none;">עדיין לא קיבלנו אישור תשלום. אם חויבת, ההרשמה תעודכן אוטומטית. לבירור: <a href="https://wa.me/972523728828" target="_blank" rel="noopener">וואטסאפ 052-3728828</a>.</div>
     </div>
@@ -372,6 +388,13 @@
         <div class="row"><label for="email">אימייל *</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="160" class="ltr" placeholder="name@example.com"></div>
         <div class="row"><label for="role_title">תפקיד *</label><input id="role_title" name="role_title" required maxlength="120" autocomplete="organization-title"></div>
         <div class="row"><label for="organization">ארגון או מקום עבודה *</label><input id="organization" name="organization" required maxlength="160" autocomplete="organization"></div>
+        <div class="row" role="radiogroup" aria-labelledby="fmtLabel">
+          <label id="fmtLabel">אופן הלימוד *</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="format" value="live" checked><span>מחזור חי ב-Google Meet<small>ימי חמישי, מהשעה 19:30.</small></span></label>
+            <label class="opt"><input type="radio" name="format" value="recorded"><span>קורס מצולם<small>אותו מחיר, אותו תוכן. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום.</small></span></label>
+          </div>
+        </div>
         <label class="check" for="terms"><input id="terms" type="checkbox" required><span>אני מאשר/ת שההרשמה כפופה למבחן כניסה, ושמי שלא יתקבל לקורס יקבל החזר מלא של התשלום.</span></label>
         <div class="price-line"><span>סה״כ לתשלום<small>4,000 ₪ ועוד מע״מ</small></span><b>4,720 ₪</b></div>
         <button type="submit" class="btn" id="payBtn">מעבר לתשלום מאובטח ←</button>
@@ -402,6 +425,7 @@
     <details><summary>האם צריך ידע בבינה מלאכותית?</summary><p>לא נדרש ניסיון בכלי מסוים. מבחן הכניסה בודק איך חושבים על מקור, ולא כמה כלים מכירים. את העבודה עם כלי AI בקפדנות ובשליטה לומדים בקורס.</p></details>
     <details><summary>מה קורה אם לא התקבלתי?</summary><p>התשלום מתבצע בעת ההרשמה, ומי שלא יתקבל לקורס יקבל החזר מלא.</p></details>
     <details><summary>האם מדובר בלימודי תעודה?</summary><p>כן. הקורס הוא לימודי תעודה בני 6 מפגשים מקוונים, ובסיומו מוענקת תעודת סיום מטעם "בית שמאי®". אפשר לראות תעודה לדוגמה בדף.</p></details>
+    <details><summary>האם יש גם קורס מצולם?</summary><p>כן. אפשר לבחור בטופס ההרשמה בין מחזור חי לקורס מצולם. המחיר זהה, והתוכן זהה, כולל כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הקורס המצולם כפוף למבחן הכניסה, ומי שלא יתקבל יקבל החזר מלא.</p></details>
     <details><summary>איך נלמד הקורס?</summary><p>בלימוד מקוון ב-Google Meet, שישה מפגשים בימי חמישי, מהשעה 19:30.</p></details>
     <details><summary>האם אפשר לשלם בהזמנת רכש?</summary><p>כן, לארגונים. אפשר להשאיר בקשה להצעת מחיר בטופס שבדף, ונחזור עם הצעה.</p></details>
     <details><summary>האם הקורס מקנה רישיון או דרגה?</summary><p>לא. הקורס מקנה תעודת סיום מטעם בית שמאי® ומכשיר לתפקיד אנליסט. הוא אינו רישיון, תואר אקדמי או דרגה. אנליסט הוא תיאור תפקיד מקצועי.</p></details>
@@ -475,7 +499,7 @@
     fetch(SB + '/rest/v1/osint_course_registrations', {
       method: 'POST',
       headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-      body: JSON.stringify({ id: id, full_name: v.full_name, phone: v.phone, email: v.email, role_title: v.role_title, organization: v.organization, accepted_terms: true })
+      body: JSON.stringify({ id: id, full_name: v.full_name, phone: v.phone, email: v.email, role_title: v.role_title, organization: v.organization, format: ((document.querySelector('input[name=format]:checked') || {}).value || 'live'), accepted_terms: true })
     }).then(function (r) {
       if (!r.ok) throw new Error('save');
       return fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ product: 'osintcourse', kind: 'enroll', case_id: id }) });

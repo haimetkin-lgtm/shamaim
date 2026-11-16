@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>שמאי בכיר לנזקי מלחמה | מס רכוש וקרן פיצויים | בית שמאי®</title>
-<meta name="description" content="לימודי תעודה מקוונים בני 4 מפגשים: שמאי בכיר לנזקי מלחמה מטעם או עבור מס רכוש ו/או מול מס רכוש. חוק מס רכוש וקרן פיצויים, נהלי עבודה ובדיקה, ושימוש ללא הגבלה במערכת VDA™ לנזקי מלחמה. 3,540 ₪ כולל מע״מ.">
-<meta name="keywords" content="שמאי נזקי מלחמה, קורס נזקי מלחמה, מס רכוש, קרן פיצויים, חוק מס רכוש וקרן פיצויים, שמאי בכיר לנזקי מלחמה, שומת נזקי מלחמה, תביעת מס רכוש, ערר מס רכוש, שמאי רכוש, שמאי ביטוח, מהנדס בניין, הנדסאי בניין, קבלני בנייה, VDA נזקי מלחמה, קורס שמאים מקוון, בית שמאי">
+<meta name="description" content="לימודי תעודה מקוונים בני 4 מפגשים: שמאי בכיר לנזקי מלחמה מטעם או עבור מס רכוש ו/או מול מס רכוש. חוק מס רכוש וקרן פיצויים, נהלי עבודה ובדיקה, ושימוש ללא הגבלה במערכת VDA™ לנזקי מלחמה. אפשר ללמוד במחזור חי או בקורס מצולם. 3,540 ₪ כולל מע״מ.">
+<meta name="keywords" content="שמאי נזקי מלחמה, קורס נזקי מלחמה, מס רכוש, קרן פיצויים, חוק מס רכוש וקרן פיצויים, שמאי בכיר לנזקי מלחמה, שומת נזקי מלחמה, תביעת מס רכוש, ערר מס רכוש, שמאי רכוש, שמאי ביטוח, מהנדס בניין, הנדסאי בניין, קבלני בנייה, VDA נזקי מלחמה, קורס שמאים מקוון, בית שמאי, קורס מצולם, קורס מוקלט, לימוד עצמי, נזקי מלחמה מצולם">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -46,7 +46,8 @@
   "offers": { "@type": "Offer", "price": "3540", "priceCurrency": "ILS", "availability": "https://schema.org/InStock", "url": "https://betshamay.co.il/war-damage/#register" },
   "hasCourseInstance": [
     { "@type": "CourseInstance", "courseMode": "online", "name": "מחזור ימי ראשון, מהשעה 19:30" },
-    { "@type": "CourseInstance", "courseMode": "online", "name": "מחזור ימי שלישי, מהשעה 19:30" }
+    { "@type": "CourseInstance", "courseMode": "online", "name": "מחזור ימי שלישי, מהשעה 19:30" },
+    { "@type": "CourseInstance", "courseMode": "online", "name": "קורס מצולם: קישור להקלטות נשלח במייל אחרי ההרשמה והתשלום" }
   ]
 }
 </script>
@@ -78,6 +79,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "כן. הקורס הוא לימודי תעודה בני 4 מפגשים מקוונים, ובסיומו מוענקת תעודת סיום מטעם \"בית שמאי®\". אפשר לראות תעודה לדוגמה בדף."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם יש גם קורס מצולם?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן. אפשר לבחור בטופס ההרשמה בין מחזור חי לקורס מצולם. המחיר זהה, והתוכן זהה, כולל כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הקורס המצולם כפוף לתנאי הקבלה, ומי שלא יתקבל יקבל החזר מלא."
       }
     },
     {
@@ -191,6 +200,12 @@
   #thanks { display: none; max-width: 560px; }
   .wa { color: var(--gold-light); font-weight: 700; }
 
+  .opts { display: grid; gap: 10px; }
+  .opt { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 600; color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; padding: 12px 14px; cursor: pointer; margin: 0; }
+  .opt input { width: 20px; height: 20px; margin-top: 3px; flex: 0 0 auto; }
+  .opt small { display: block; font-weight: 400; font-size: 13px; color: #b9cdbb; }
+  .opt:has(input:checked) { border-color: var(--gold-light); background: rgba(232,184,75,.14); }
+
   .faq details { background: #fff; border: 1px solid #e1e8e1; border-radius: 10px; padding: 14px 20px; margin-bottom: 10px; }
   .faq summary { cursor: pointer; font-weight: 800; }
   .faq p { margin-top: 10px; color: #444; }
@@ -224,7 +239,7 @@
   <p class="sub">מטעם או עבור מס רכוש ו/או מול מס רכוש</p>
   <div class="facts">
     <div class="fact">4 מפגשים<small>לימודי תעודה מקוונים</small></div>
-    <div class="fact">ימי ראשון או ימי שלישי<small>מהשעה 19:30, שני מחזורים במקביל</small></div>
+    <div class="fact">ימי ראשון או ימי שלישי<small>מהשעה 19:30, או קורס מצולם באותו מחיר</small></div>
     <div class="fact">3,540 ₪<small>כולל מע״מ</small></div>
   </div>
   <a class="btn" href="#register">להרשמה ותשלום</a>
@@ -324,6 +339,7 @@
       <div class="term"><b>תשלום</b>התשלום מתבצע בעת ההרשמה, 3,540 ₪ כולל מע״מ, בכרטיס אשראי דרך דף תשלום מאובטח של קארדקום.</div>
       <div class="term"><b>החזר כספי</b>מי שלא התקבל לקורס יקבל החזר מלא של התשלום.</div>
       <div class="term"><b>מחזורים</b>שני מחזורים פועלים במקביל: ימי ראשון וימי שלישי, מהשעה 19:30, בלימוד מקוון.</div>
+      <div class="term"><b>קורס מצולם</b>אפשר גם ללמוד בקורס מצולם, באותו מחיר, עם כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הוא כפוף לתנאי הקבלה ולהחזר מלא למי שלא התקבל.</div>
     </div>
   </div>
 </section>
@@ -331,12 +347,12 @@
 <section class="reg" id="register">
   <div class="container">
     <h2>הרשמה ותשלום</h2>
-    <p class="lead">ממלאים פרטים, בוחרים מחזור ועוברים לדף התשלום המאובטח.</p>
+    <p class="lead">ממלאים פרטים, בוחרים מחזור חי או קורס מצולם ועוברים לדף התשלום המאובטח.</p>
 
     <div id="failed" class="msg err" style="display:none; max-width:560px;">התשלום לא הושלם. אפשר לנסות שוב, או לפנות אלינו ב<a href="https://wa.me/972523728828" target="_blank" rel="noopener">וואטסאפ</a>.</div>
 
     <div id="thanks">
-      <div class="msg ok" id="thanksOk" style="display:none;"><b>התשלום התקבל, תודה!</b><br>ההרשמה נקלטה. נחזור אליך בהקדם עם אישור קבלה ופרטי ההתחברות למפגשים. מי שלא יתקבל יקבל החזר מלא.</div>
+      <div class="msg ok" id="thanksOk" style="display:none;"><b>התשלום התקבל, תודה!</b><br>ההרשמה נקלטה. נחזור אליך בהקדם עם אישור קבלה ופרטי ההתחברות למפגשים. מי שבחר בקורס המצולם יקבל קישור להקלטות למייל. מי שלא יתקבל יקבל החזר מלא.</div>
       <div class="msg ok" id="thanksWait" style="display:none;">מאמתים את התשלום מול חברת האשראי. אפשר להמתין כמה שניות בדף.</div>
       <div class="msg err" id="thanksLate" style="display:none;">עדיין לא קיבלנו אישור תשלום. אם חויבת, ההרשמה תעודכן אוטומטית. לבירור: <a href="https://wa.me/972523728828" target="_blank" rel="noopener">וואטסאפ 052-3728828</a>.</div>
     </div>
@@ -355,7 +371,14 @@
         </select>
       </div>
       <div class="row"><label for="license_no">מספר רישיון (אם יש)</label><input id="license_no" name="license_no" maxlength="40" class="ltr"></div>
-      <div class="row">
+      <div class="row" role="radiogroup" aria-labelledby="fmtLabel">
+          <label id="fmtLabel">אופן הלימוד *</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="format" value="live" checked><span>מחזור חי ב-Google Meet<small>ימי ראשון או ימי שלישי, מהשעה 19:30.</small></span></label>
+            <label class="opt"><input type="radio" name="format" value="recorded"><span>קורס מצולם<small>אותו מחיר, אותו תוכן. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום.</small></span></label>
+          </div>
+        </div>
+        <div class="row" id="cohortRow">
         <label for="cohort">מחזור *</label>
         <select id="cohort" name="cohort" required>
           <option value="">בחירה</option>
@@ -377,6 +400,7 @@
     <details><summary>האם צריך להגיש קורות חיים?</summary><p>לא. כל מי שהוא שמאי מקרקעין, שמאי רכוש, מהנדס בניין, הנדסאי בניין, קבלן בנייה או שמאי ביטוח יכול להירשם.</p></details>
     <details><summary>מה קורה אם לא התקבלתי?</summary><p>התשלום מתבצע בעת ההרשמה, ומי שלא יתקבל יקבל החזר מלא.</p></details>
     <details><summary>האם מדובר בלימודי תעודה?</summary><p>כן. הקורס הוא לימודי תעודה בני 4 מפגשים מקוונים, ובסיומו מוענקת תעודת סיום מטעם "בית שמאי®". אפשר לראות תעודה לדוגמה בדף.</p></details>
+    <details><summary>האם יש גם קורס מצולם?</summary><p>כן. אפשר לבחור בטופס ההרשמה בין מחזור חי לקורס מצולם. המחיר זהה, והתוכן זהה, כולל כל מה שכולל הקורס החי. קישור להקלטות נשלח למייל אחרי ההרשמה והתשלום. גם הקורס המצולם כפוף לתנאי הקבלה, ומי שלא יתקבל יקבל החזר מלא.</p></details>
     <details><summary>איך נלמד הקורס?</summary><p>בלימוד מקוון ב-Google Meet, ארבעה מפגשים, בשני מחזורים במקביל: ימי ראשון וימי שלישי, מהשעה 19:30.</p></details>
     <details><summary>מה כולל השימוש במערכת <span class="ltr-inline">VDA™</span> לנזקי מלחמה?</summary><p>בוגרי הקורס מקבלים שימוש ללא הגבלה במערכת. כיום המערכת פתוחה לשימוש בודד בלבד לכל משתמש.</p></details>
     <details><summary>האם ההסמכה היא מטעם רשות המסים?</summary><p>לא. הקורס מקנה הסמכה מקצועית פנימית מטעם "בית שמאי®", ואינו רישוי סטטוטורי או מינוי מטעם רשות המסים או מס רכוש.</p></details>
@@ -424,6 +448,9 @@
   }
 
   var form = $('regForm');
+  Array.prototype.forEach.call(document.querySelectorAll('input[name=format]'), function (r) {
+    r.addEventListener('change', function () { $('cohortRow').style.display = (document.querySelector('input[name=format]:checked').value === 'recorded') ? 'none' : ''; });
+  });
   var busy = false;
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -436,7 +463,9 @@
       full_name: $('full_name').value.trim(), phone: $('phone').value.trim(), email: $('email').value.trim(),
       profession: $('profession').value, license_no: $('license_no').value.trim(), cohort: $('cohort').value
     };
-    if (!v.full_name || !v.phone || !v.email || !v.profession || !v.cohort) return fail('יש למלא את כל שדות החובה.');
+    var fmt = (document.querySelector('input[name=format]:checked') || {}).value || 'live';
+    if (fmt === 'recorded') v.cohort = '';
+    if (!v.full_name || !v.phone || !v.email || !v.profession || (fmt === 'live' && !v.cohort)) return fail('יש למלא את כל שדות החובה.');
     if (!/^\S+@\S+\.\S+$/.test(v.email)) return fail('כתובת האימייל אינה תקינה.');
     if (v.phone.replace(/\D/g, '').length < 9) return fail('מספר הטלפון אינו תקין.');
     if (!$('terms').checked) return fail('יש לאשר את תנאי הקבלה וההחזר.');
@@ -451,7 +480,7 @@
     fetch(SB + '/rest/v1/war_course_registrations', {
       method: 'POST',
       headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-      body: JSON.stringify({ id: id, full_name: v.full_name, phone: v.phone, email: v.email, profession: v.profession, license_no: v.license_no || null, cohort: v.cohort, accepted_terms: true })
+      body: JSON.stringify({ id: id, full_name: v.full_name, phone: v.phone, email: v.email, profession: v.profession, license_no: v.license_no || null, cohort: fmt === 'recorded' ? null : v.cohort, format: fmt, accepted_terms: true })
     }).then(function (r) {
       if (!r.ok) throw new Error('save');
       return fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ product: 'warcourse', kind: 'enroll', case_id: id }) });
